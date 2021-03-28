@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
         <Navbar
           color="default"
           logo="images/TMSC.png"
-          logoInverted="images/TMSC Inverted.png"
+          logoInverted="images/TMSC-Inverted.png"
         />
 
         <Component {...pageProps} />
@@ -35,7 +35,7 @@ function MyApp({ Component, pageProps }) {
           description="A short description of what you do here"
           copyright="© 2020 Company"
           logo="images/TMSC.png"
-          logoInverted="images/TMSC Inverted.png"
+          logoInverted="images/TMSC-Inverted.png"
           sticky={true}
         />
       </>

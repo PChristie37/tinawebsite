@@ -39,6 +39,7 @@ function Navbar(props) {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [menuState, setMenuState] = useState(null);
 
+  console.log(darkMode);
   // Use inverted logo if specified
   // and we are in dark mode
   const logo =
@@ -56,6 +57,7 @@ function Navbar(props) {
 
   return (
     <Section bgColor={props.color} size="auto">
+      {console.log(logo)}
       <AppBar position="static" color="transparent" elevation={0}>
         <Container disableGutters={true}>
           <Toolbar>
@@ -94,15 +96,16 @@ function Navbar(props) {
                   Resume
                 </Button>
               </Link>
-
+{console.log(darkMode)}
               <IconButton
                 color="inherit"
                 onClick={darkMode.toggle}
                 style={{ opacity: 0.6 }}
               >
-                {darkMode.value && <NightsStayIcon />}
+                {/* {darkMode.value && <NightsStayIcon />} */}
 
-                {!darkMode.value && <WbSunnyIcon />}
+                {/* {!darkMode.value && <WbSunnyIcon />} */}
+                {darkMode.value ? <WbSunnyIcon />: <NightsStayIcon />}
               </IconButton>
             </Hidden>
           </Toolbar>
@@ -140,9 +143,9 @@ function Navbar(props) {
           onClick={darkMode.toggle}
           style={{ opacity: 0.6 }}
         >
-          {darkMode.value && <NightsStayIcon />}
+          {/* {darkMode.value && <NightsStayIcon />}
 
-          {!darkMode.value && <WbSunnyIcon />}
+          {!darkMode.value && <WbSunnyIcon />} */}
         </IconButton>
       </Drawer>
     </Section>
